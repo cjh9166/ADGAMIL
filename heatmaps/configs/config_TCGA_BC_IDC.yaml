@@ -13,13 +13,13 @@ exp_arguments:
 
 data_arguments: 
   # 数据存储位置；使用绝对路径指向包含 .tif 文件的目录(.svs)
-  data_dir: "D:/ADGA-MIL/CLAM+Dynamic/Numbers of neighbors/data_TZ/BRCA"
+  data_dir: "D:/ADGA-MIL/data_TZ/BRCA"
   # 数据目录中的键名（如果使用字典映射）
   data_dir_key: source
   # 包含 slide_id 的 CSV 列表；使用绝对路径
-  process_list: "D:/ADGA-MIL/CLAM+Dynamic/Numbers of neighbors/dataset_csv/tcga_brca_heatmap_IDC.csv"
+  process_list: "D:/ADGA-MIL/dataset_csv/tcga_brca_heatmap_IDC.csv"
   # 分割/补丁提取的预设文件；使用绝对路径
-  preset: "D:/ADGA-MIL/CLAM+Dynamic/Numbers of neighbors/presets/tcga_brca_r50_preset.csv"
+  preset: "D:/ADGA-MIL/presets/tcga_brca_r50_preset.csv"
   # 幻灯片的文件扩展名
   slide_ext: .svs
   # 标签字典（字符串到整数映射）
@@ -44,7 +44,7 @@ encoder_arguments:
 
 model_arguments: 
   # 模型 checkpoint 路径
-  ckpt_path: "D:/ADGA-MIL/CLAM+Dynamic/Numbers of neighbors/results/3/TCGA_BC_R50_100_s1/s_1_best_checkpoint.pt"
+  ckpt_path: "D:/ADGA-MIL/results/3/TCGA_BC_R50_100_s1/s_1_best_checkpoint.pt"
   model_type: clam_sb     # 支持 clam_sb（单分支）或 clam_mb（多分支）
   initiate_fn: initiate_model
   model_size: small
@@ -78,3 +78,4 @@ sample_arguments:
 
 data_loader_arguments:
   num_workers: 0          # DataLoader 并行线程数（Windows 下建议 0）
+
